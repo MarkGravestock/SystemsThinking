@@ -1,2 +1,6 @@
 rootProject.name = 'SystemsThinking'
 
+include 'SystemModel'
+
+include 'SystemModelTest'
+

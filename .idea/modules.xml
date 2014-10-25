@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SystemModel/SystemModel.iml" filepath="$PROJECT_DIR$/SystemModel/SystemModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SystemModelTest/SystemModelTest.iml" filepath="$PROJECT_DIR$/SystemModelTest/SystemModelTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/SystemsThinking.iml" filepath="$PROJECT_DIR$/SystemsThinking.iml" />
     </modules>
   </component>
