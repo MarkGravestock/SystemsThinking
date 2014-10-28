@@ -6,7 +6,6 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 public class Stock {
     private String name;
-
     private Flow inFlow;
 
     public Stock(String name, Flow inFlow) {
@@ -23,6 +22,8 @@ public class Stock {
 
     public Quantity getMeasure(Time time) {
         Stream<Time> times  = Time.asRange(time);
-        return times.map(x -> inFlow.getMeasure(x)).reduce(Quantity.of(0, Unit.Litres), (x, y) -> x.add(y));
+        ///CLOVER:OFF
+        return times.map(inFlow::getMeasure).reduce(Quantity.of(0, Unit.Litres), (y, z) -> y.add(z));
+        ///CLOVER:ON
     }
 }

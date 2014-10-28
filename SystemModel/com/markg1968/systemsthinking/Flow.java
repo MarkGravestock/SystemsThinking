@@ -11,10 +11,12 @@ public class Flow {
     }
 
     public String getName() {
+
         return name;
     }
 
      public Quantity getMeasure(Time time) {
+
          return Quantity.of(1, Unit.Litres);
      }
 }

@@ -19,6 +19,6 @@ public class TimeTest {
     @Test
     public void testOfRange() throws Exception {
         Stream<Time> times = Time.asRange(Time.atSeconds(3));
-        assertThat(times.count(), is(equalTo(4L)));
+        assertThat(times.count(), is(equalTo(3L)));
     }
 }
