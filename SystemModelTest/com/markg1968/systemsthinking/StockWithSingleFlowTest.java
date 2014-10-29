@@ -1,5 +1,6 @@
 package com.markg1968.systemsthinking;
 
+import com.google.common.collect.ImmutableSet;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,7 +18,7 @@ public class StockWithSingleFlowTest {
     @Before
     public void setup() {
 
-        sut = new Stock(STOCK_NAME, new FixedInflow(FLOW_NAME));
+        sut = new Stock(STOCK_NAME, ImmutableSet.of(new FixedInflow(FLOW_NAME)));
     }
 
     @Test
@@ -42,5 +43,12 @@ public class StockWithSingleFlowTest {
     public void aStockHasTheCorrectMeasureAtAnEvenLaterPointTime() {
 
         assertThat(sut.getMeasure(Time.atSeconds(10)), is(equalTo(Quantity.of(10, Unit.Litres))));
+    }
+
+    @Test
+    public void aStockHasTheCorrectMeasureAtAPointTimeWhenItHasAnInitialMeasure() {
+        sut = new Stock(STOCK_NAME, ImmutableSet.of(new FixedInflow(FLOW_NAME)), Quantity.of(10, Unit.Litres));
+
+        assertThat(sut.getMeasure(Time.atSeconds(10)), is(equalTo(Quantity.of(20, Unit.Litres))));
     }
 }

@@ -20,6 +20,12 @@ public class QuantityTest {
     }
 
     @Test
+    public void aQuantityHasTheExpectedMagnitude() {
+
+        assertThat(Quantity.of(4, Unit.Litres).asMagnitudeOf(Unit.Litres), is(equalTo(4L)));
+    }
+
+    @Test
     public void whenAQuantityHasEqualPropertiesThenItHasAnEqualHashCode() {
 
         assertThat(Quantity.of(4, Unit.Litres).hashCode(), is(equalTo(Quantity.of(4, Unit.Litres).hashCode())));

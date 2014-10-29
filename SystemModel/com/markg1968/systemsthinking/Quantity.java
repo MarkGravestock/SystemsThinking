@@ -25,15 +25,21 @@ public class Quantity {
         return of(BigDecimal.valueOf(amount), unit);
     }
 
+    public long asMagnitudeOf(Unit unit) {
+        Preconditions.checkArgument(hasCompatibleUnits(unit));
+
+        return magnitude.longValue();
+    }
+
     public Quantity add(Quantity other) {
 
-        Preconditions.checkArgument(hasCompatibleUnits(other));
+        Preconditions.checkArgument(hasCompatibleUnits(other.unit));
 
         return of(other.magnitude.add(this.magnitude), unit);
     }
 
-    private boolean hasCompatibleUnits(Quantity other) {
-        return unit.equals(other.unit);
+    private boolean hasCompatibleUnits(Unit other) {
+        return unit.equals(other);
     }
 
     @Override

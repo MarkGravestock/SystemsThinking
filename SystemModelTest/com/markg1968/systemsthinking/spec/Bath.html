@@ -1,0 +1,26 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<body>
+<div class="example">
+
+    <h3>Examples</h3>
+
+    <table concordion:execute="#measure = getFor(#time)">
+        <tr>
+            <th concordion:set="#time">Time (s)</th>
+            <th concordion:assertEquals="#measure">Measure (Litres)</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>50</td>
+        </tr>
+    </table>
+</div></body>
+</html>
