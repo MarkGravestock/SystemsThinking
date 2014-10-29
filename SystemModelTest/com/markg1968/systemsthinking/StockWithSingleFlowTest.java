@@ -7,7 +7,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
-public class StockTest {
+public class StockWithSingleFlowTest {
 
     public static final String STOCK_NAME = "Bath";
     public static final String FLOW_NAME = "Tap";
@@ -17,7 +17,7 @@ public class StockTest {
     @Before
     public void setup() {
 
-        sut = new Stock(STOCK_NAME, new Flow(FLOW_NAME));
+        sut = new Stock(STOCK_NAME, new FixedInflow(FLOW_NAME));
     }
 
     @Test

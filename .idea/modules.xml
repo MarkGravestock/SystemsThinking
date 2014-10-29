@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/SystemModel/SystemModel.iml" filepath="$PROJECT_DIR$/SystemModel/SystemModel.iml" />
       <module fileurl="file://$PROJECT_DIR$/SystemModelTest/SystemModelTest.iml" filepath="$PROJECT_DIR$/SystemModelTest/SystemModelTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/SystemsThinking.iml" filepath="$PROJECT_DIR$/SystemsThinking.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/GitHub/AutoFixtureGenerator/src/main/main.iml" filepath="$USER_HOME$/Documents/GitHub/AutoFixtureGenerator/src/main/main.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/GitHub/AutoFixtureGenerator/src/test/test.iml" filepath="$USER_HOME$/Documents/GitHub/AutoFixtureGenerator/src/test/test.iml" />
     </modules>
   </component>
 </project>
