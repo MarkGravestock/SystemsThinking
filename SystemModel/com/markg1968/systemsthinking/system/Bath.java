@@ -12,7 +12,7 @@ public class Bath implements Measurable {
 
     public Bath(Quantity initialMeasure) {
 
-        stock = new Stock(STOCK_NAME, ImmutableSet.of(new FixedInflow(IN_FLOW_NAME), new FixedOutflow(OUT_FLOW_NAME)), initialMeasure);
+        stock = new Stock(STOCK_NAME, ImmutableSet.of(new DelayedFixedInflow(IN_FLOW_NAME), new FixedOutflow(OUT_FLOW_NAME)), initialMeasure);
     }
 
     @Override

@@ -1,5 +1,7 @@
 <html xmlns:concordion="http://www.concordion.org/2007/concordion">
 <body>
+<p>The Bath models a system with a single Stock (the water in the bath) with a single Flow in (water from a tap) and a single Flow out (from the plug).</p>
+<p>This example is taken from <a href="http://www.amazon.co.uk/gp/product/B005VSRFEA?btkr=1">Donnela Meadow's 'Thinking in Systems'</a> and implements the example of dynamic equilibrium.</p>
 <div class="example">
 
     <h3>Examples</h3>
@@ -7,19 +9,27 @@
     <table concordion:execute="#measure = getFor(#time)">
         <tr>
             <th concordion:set="#time">Time (s)</th>
-            <th concordion:assertEquals="#measure">Measure (Litres)</th>
+            <th concordion:assertEquals="#measure">Bath Stock of water (Litres)</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>50</td>
         </tr>
         <tr>
             <td>1</td>
-            <td>50</td>
+            <td>49</td>
         </tr>
         <tr>
             <td>2</td>
-            <td>50</td>
+            <td>48</td>
         </tr>
         <tr>
             <td>3</td>
-            <td>50</td>
+            <td>48</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>48</td>
         </tr>
     </table>
 </div></body>

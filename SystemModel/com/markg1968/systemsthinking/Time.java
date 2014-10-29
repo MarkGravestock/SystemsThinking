@@ -1,5 +1,6 @@
 package com.markg1968.systemsthinking;
 
+import com.google.common.base.Preconditions;
 import com.google.common.collect.*;
 
 import java.math.BigDecimal;
@@ -24,7 +25,12 @@ public class Time extends Quantity {
     }
 
     public static Stream<Time> asRange(Time upper) {
+        Preconditions.checkArgument(upper.isAfter(Time.atSeconds(-1)));
 
-        return StreamSupport.stream(ofRange(upper).spliterator(), false);
+        return upper.magnitude.longValue() > 0 ? StreamSupport.stream(ofRange(upper).spliterator(), false) : Stream.<Time>empty();
+    }
+
+    public boolean isAfter(Time comparison) {
+        return magnitude.compareTo(comparison.magnitude) > 0;
     }
 }
