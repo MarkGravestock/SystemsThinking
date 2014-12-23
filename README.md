@@ -7,4 +7,4 @@ It includes a model of a Bath, a system with a single Stock (the water in the ba
 
 This example is taken from [Donnela Meadow's 'Thinking in Systems'](http://www.amazon.co.uk/gp/product/B005VSRFEA?btkr=1) and implements the example of dynamic equilibrium.
 
-I've also created the same model using [Insight Maker](https://insightmaker.com/insight/20774) which is a tool for modeling system s.
+I've also created the same model using [Insight Maker](https://insightmaker.com/insight/20774) which is a tool for modeling systems.
